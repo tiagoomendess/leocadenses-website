@@ -54,10 +54,10 @@
             </div>
 
             <div class="row center">
-                <a href="/" class="waves-effect waves-light btn-large green">Ir para o Site</a>
+                <a style="margin-top: 10px" href="/" class="waves-effect waves-light btn-large green">Ir para o Site</a>
                 @if($member)
                     @can('edit', $member)
-                        <a href="{{ route('voyager.members.edit', ['id' => $member->id]) ?? '#' }}"
+                        <a style="margin-top: 10px" href="{{ route('voyager.members.edit', ['id' => $member->id]) ?? '#' }}"
                            class="waves-effect waves-light btn-large orange">ficha de sócio</a>
                     @endcan
                 @endif
