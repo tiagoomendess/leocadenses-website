@@ -92,8 +92,8 @@ class GenerateMemberCards extends Command
 
             $baseImage->insert($transparentQr, 'bottom-right',60, 60);
 
-            $filename = "/storage/members/cards/$token.png";
-            $baseImage->save(public_path($filename));
+            $filename = "members/cards/$token.png";
+            $baseImage->save(storage_path($filename));
 
             if (!is_null($member->card)) {
                 try {
