@@ -44,16 +44,10 @@
                     </table>
 
                     <br/>
-                    <br/>
-                    <br/>
-                    <br/>
 
                 @else
                     <br/>
                     <h2 class="red-text">Cartão Inválido</h2>
-                    <br/>
-                    <br/>
-                    <br/>
                     <br/>
 
                 @endif
@@ -68,8 +62,10 @@
                     @endcan
                 @endif
             </div>
+            <br/>
+            <br/>
+            <br/>
         </div>
-
 
     </main>
 
