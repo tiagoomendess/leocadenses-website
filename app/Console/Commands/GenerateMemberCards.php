@@ -93,11 +93,11 @@ class GenerateMemberCards extends Command
             $baseImage->insert($transparentQr, 'bottom-right',60, 60);
 
             $filename = "members/cards/$token.png";
-            $baseImage->save(storage_path($filename));
+            $baseImage->save(public_path("/storage/$filename"));
 
             if (!is_null($member->card)) {
                 try {
-                    unlink(storage_path($member->card));
+                    unlink(public_path("/storage/" . $member->card));
                 } catch (\Exception $e) {
                     $this->log('Error trying to delete existing card image', 'error');
                 }

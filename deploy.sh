@@ -7,7 +7,7 @@ php artisan down
 
 echo "\n--- Get Code -----------"
 git reset --hard
-git pull
+git pull origin master
 
 echo "\n--- Clear Cache -----------"
 php artisan cache:clear
@@ -16,8 +16,6 @@ composer install
 
 echo "\n--- Running migrations ------------"
 php artisan migrate --env=production
-
-npm install
 
 npm run production
 
