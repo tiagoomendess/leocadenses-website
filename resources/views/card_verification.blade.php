@@ -9,6 +9,7 @@
         <div class="container center" style="">
             <div class="row">
                 @if ($member)
+                    <br/>
                     <h2 class="green-text">Cartão Válido</h2>
                     <table class="">
                         <tr>
@@ -42,8 +43,19 @@
                         </tr>
                     </table>
 
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+
                 @else
+                    <br/>
                     <h2 class="red-text">Cartão Inválido</h2>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+
                 @endif
             </div>
 
