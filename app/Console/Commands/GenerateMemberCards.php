@@ -97,7 +97,7 @@ class GenerateMemberCards extends Command
 
             if (!is_null($member->card)) {
                 try {
-                    unlink(public_path($member->card));
+                    unlink(storage_path($member->card));
                 } catch (\Exception $e) {
                     $this->log('Error trying to delete existing card image', 'error');
                 }
