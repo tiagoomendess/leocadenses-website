@@ -4,6 +4,10 @@
     <title>{{ setting('site.title') }} - Novo Sócio</title>
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta property="og:title" content="{{ setting('site.title') }} - Novo Sócio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{{ setting('site.logo') }}">
+
     {!! \Biscolab\ReCaptcha\Facades\ReCaptcha::htmlScriptTagJsApi() !!}
 @endsection
 

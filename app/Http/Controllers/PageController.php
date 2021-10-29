@@ -8,7 +8,7 @@ class PageController extends Controller
 {
     public function show(string $slug)
     {
-        $page = Page::where('slug', 'home')->first();
+        $page = Page::where('slug', $slug)->first();
 
         if (!$page)
             abort(500);

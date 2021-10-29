@@ -2,6 +2,15 @@
 
 @section('head')
     <title>{{ setting('site.title') }} :: {{ $page->title }}</title>
+
+    <meta name="description" content="{{ $page->meta_description }}">
+    <meta name="keywords" content="{{ $page->meta_keywords }}">
+
+    <meta property="og:title" content="{{ $page->title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ route('page', ['slug' => $post->slug]) }}" />
+    <meta property="og:image" content="{{ $page->image ? Voyager::image($page->image) : setting('site.logo') }}">
+    <meta property="og:description" content="{{ $page->meta_description }}" />
 @endsection
 
 @section('body')
@@ -11,4 +20,3 @@
         {!! $page->body !!}
     </div>
 @endsection
-
