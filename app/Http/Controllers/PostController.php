@@ -11,7 +11,7 @@ class PostController extends Controller
         $post = Post::where('slug', $slug)->first();
 
         if (!$post)
-            abort(500);
+            abort(404);
 
         return view('post', ['post' => $post]);
     }
