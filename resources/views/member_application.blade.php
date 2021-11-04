@@ -8,11 +8,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="{{ setting('site.logo') }}">
 
+    <meta name="description" content="Inscreva-se como sócio do Leocadenses">
+
     {!! \Biscolab\ReCaptcha\Facades\ReCaptcha::htmlScriptTagJsApi() !!}
 @endsection
 
 @section('body')
     <main>
+        <h1 class="hide">{{ setting('site.title') }} - Novo Sócio</h1>
         <div class="container" style="margin-top: 10px">
             @if(!empty($page))
                 {!! $page->body !!}

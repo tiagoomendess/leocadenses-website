@@ -2,10 +2,12 @@
 
 @section('head')
     <title>{{ setting('site.title') }} :: Notícias</title>
+    <meta name="description" content="Últimas noticias sobre o Leocadenses">
 @endsection
 
 @section('body')
     <div class="container">
+        <h1 class="hide">{{ setting('site.title') }} :: Notícias</h1>
         <div class="row">
             @foreach($posts as $post)
                 <div class="col s12 l8 offset-l2">

@@ -2,10 +2,13 @@
 
 @section('head')
     <title>{{ setting('site.title') }} - Verificação</title>
+    <meta name="description" content="Verificação do Cartão de Sócio">
 @endsection
 
 @section('body')
     <main style="">
+        <h1 class="hide">{{ setting('site.title') }} - Verificação</h1>
+
         <div class="container center" style="">
             <div class="row">
                 @if ($member)

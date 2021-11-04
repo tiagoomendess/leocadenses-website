@@ -2,10 +2,12 @@
 
 @section('head')
     <title>{{ setting('site.title') }}</title>
+    <meta name="description" content="Website oficial do Leocadenses. Clube amador de Tamel Santa Leocádia em Barcelos. A competir desde 1987">
 @endsection
 
 @section('body')
     <main>
+        <h1 class="hide">{{ setting('site.title') }}</h1>
         <div class="parallax-container">
             <div class="parallax"><img src="{{ setting('site.header_image') ?? 'images/header.jpg' }}"></div>
         </div>
