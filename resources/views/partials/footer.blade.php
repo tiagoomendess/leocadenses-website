@@ -29,7 +29,7 @@
 
             @foreach(\App\Partner::where('visible', true)->orderBy('position', 'asc')->get() as $partner)
                 <div class="col s12 m6 l4 center">
-                    <a targer="_blank" href="{{ $partner->url }}">
+                    <a target="_blank" href="{{ $partner->url }}">
                         <img
                             src="{{ Voyager::image($partner->picture) }}"
                             alt="{{ $partner->name }}"
