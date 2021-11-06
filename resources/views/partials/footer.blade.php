@@ -27,9 +27,9 @@
                 <p class="center">Parceiros</p>
             </div>
 
-            @foreach(\App\Partner::where('visible', true)->get() as $partner)
+            @foreach(\App\Partner::where('visible', true)->orderBy('position', 'asc')->get() as $partner)
                 <div class="col s12 m6 l4 center">
-                    <a href="{{ $partner->url }}">
+                    <a targer="_blank" href="{{ $partner->url }}">
                         <img
                             src="{{ Voyager::image($partner->picture) }}"
                             alt="{{ $partner->name }}"
