@@ -11,7 +11,7 @@
 
         <div class="container center" style="">
             <div class="row">
-                @if ($member)
+                @if ($member && $member->isValid())
                     <br/>
                     <h2 class="green-text">Cartão Válido</h2>
                     <table class="">
@@ -52,7 +52,7 @@
                     <br/>
                     <h2 class="red-text">Cartão Inválido</h2>
                     <br/>
-
+                    <p class="flow-text">Se acredita que isto é um erro, por favor contacte a Direção do Clube</p>
                 @endif
             </div>
 
