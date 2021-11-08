@@ -25,7 +25,6 @@ class Member extends Model
     public function isValid() {
         return !empty($this->document)
             && strlen($this->document) > 4
-            && $this->document != 'nada'
-            && $this->document != 'Nada';
+            && ($this->document != 'nada' || $this->document != 'Nada');
     }
 }
