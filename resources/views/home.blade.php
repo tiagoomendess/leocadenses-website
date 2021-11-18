@@ -9,7 +9,7 @@
     <main>
         <h1 class="hide">{{ setting('site.title') }}</h1>
         <div class="parallax-container">
-            <div class="parallax"><img src="{{ setting('site.header_image') ?? 'images/header.jpg' }}"></div>
+            <div class="parallax"><img src="{{ setting('site.header_image') ? Voyager::image(setting('site.header_image')) : 'images/header.jpg' }}"></div>
         </div>
 
         @if($nextGame->has_game)
