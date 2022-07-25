@@ -41,11 +41,18 @@
                                 @foreach($member->quotas as $quota)
                                     @php($strs[] = $quota->name)
                                 @endforeach
-                                {{ implode(', ', isset($strs) ? $strs : []) }}
+                                {{ implode(', ', isset($strs) ? $strs : ['Nenhuma']) }}
+
+
                             </td>
                         </tr>
+
+
                     </table>
 
+                    @if(!$member->hasAllQuotasPaid())
+                        <p class="flow-text red-text center">Sócio com Quotas em atraso</p>
+                    @endif
                     <br/>
 
                 @else

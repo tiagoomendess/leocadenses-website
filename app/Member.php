@@ -27,4 +27,26 @@ class Member extends Model
             && strlen($this->document) > 4
             && ($this->document != 'nada' || $this->document != 'Nada');
     }
+
+    public function hasAllQuotasPaid() : bool
+    {
+        $now = new \DateTime();
+
+        $allAvailable = Quota::where('due_date', '>', $this->created_at)
+            ->where('due_date', '<', $now->format('Y-m-d'))
+            ->get();
+
+        $paid = $this->quotas;
+
+        if (count($paid) == 0)
+            return false;
+
+        foreach ($allAvailable as $available) {
+            if (!$paid->contains($available)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }
