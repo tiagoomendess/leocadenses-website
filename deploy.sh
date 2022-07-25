@@ -2,6 +2,10 @@ echo "#########################"
 echo "#   Starting deploy!"   #"
 echo "#########################"
 
+echo "\n--- Dealing with permissions ------------"
+chmod 755 -R ../leocadenses/
+chown root ../leocadenses/ -R
+
 echo "\n--- Taking application down ------------"
 php artisan down
 
