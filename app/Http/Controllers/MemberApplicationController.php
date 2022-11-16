@@ -23,6 +23,7 @@ class MemberApplicationController
             'email' => 'required|string|email:rfc,dns|max:70|min:6',
             'document_type' => 'required|integer|min:1|max:999',
             'documento' => 'required|string||max:70|min:6',
+            'address' => 'required|string||max:100|min:6',
             'g-recaptcha-response' => 'recaptcha'
         ]);
 
@@ -32,6 +33,7 @@ class MemberApplicationController
         $new->email = $validated['email'];
         $new->document_type_id = $validated['document_type'];
         $new->document = $validated['documento'];
+        $new->address = $validated['address'];
         $new->save();
 
         return redirect()->back()->withCookie(cookie('member_application_submitted', true, 10080));
