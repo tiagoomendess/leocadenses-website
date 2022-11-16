@@ -91,7 +91,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="input-field col s10">
+                            <div class="input-field col s12">
                                 <input required name="address" id="address" type="text" class="validate"
                                        value="{{ old('address') }}">
                                 <label for="address">Morada</label>
