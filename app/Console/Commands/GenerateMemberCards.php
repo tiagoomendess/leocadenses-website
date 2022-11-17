@@ -107,6 +107,7 @@ class GenerateMemberCards extends Command
             $member->card = $filename;
             $member->card_token = $token;
             $member->generate_card = false;
+            $member->card_printed = false;
             $member->save();
 
             $this->log("Finished card for member number $member->number");
