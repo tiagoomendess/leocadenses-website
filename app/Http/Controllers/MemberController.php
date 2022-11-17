@@ -13,6 +13,11 @@ class MemberController extends BaseController
     {
         $member = Member::where('card_token', $token)->first();
 
+        if (!empty($member) && !$member->card_printed) {
+            $member->card_printed = true;
+            $member->save();
+        }
+
         return view('card_verification', ['member' => $member]);
     }
 }
